@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Home</title>
+</head>
+<body>
+    
+    <h1 id="h2"></h1>
+    <button id="btn">Delete me</button>
+    <script>
+        setInterval(()=>{
+        if (localStorage.getItem("name") != ""){ document.getElementById("h2").innerText = "Welcome " + localStorage.getItem("name");}
+        else {window.location = "login.html"}
+        },1000)
+        document.getElementById("btn").onclick = () => {
+            localStorage.clear()
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+* {
+    padding : 0;
+    margin : 0;
+    user-select: none;
+    flex-shrink: 0;
+}
+html , body {
+    width : 100%;
+    height : 100%
+}
+body {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+p#money {
+    width : 300px;
+    height : 70px;
+    background : #031246;
+    color : white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.container {
+    width : 500px;
+    height : fit-content;
+    min-height: 500px;
+    background-color: #465;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container span {
+    width : 80px;
+    height : 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    color : white;
+    background : darkblue;
+    padding : 7px;
+    margin: 5px;
+    align-items: center;
+    font-size: 30px;
+}
+
+button {
+    width : 70px;
+    border : none;
+    background : goldenrod;
+    cursor : pointer;
+    border-radius: 5px;
+}
+button:active {
+    scale : 0.95
+}
+button.disable {
+    background : red;
+    cursor : no-drop;
+}
+button.disable:active {scale: 1;}

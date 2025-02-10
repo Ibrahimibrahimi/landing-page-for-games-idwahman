@@ -1,0 +1,45 @@
+* {
+    padding : 0;
+    margin : 0;
+    flex-shrink: 0;
+}
+
+html , body {
+    width : 100%;
+    height: 100%;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.result {
+    width : 600px;
+    height : 100px;
+    outline : solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color : black;
+}
+
+.container {
+    width : 600px;
+    min-height : 600px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    outline : solid 1px;
+    margin : 5px;
+}
+
+.container span.element {
+    width : 70px;
+    height : 70px;
+    background : lightslategray;
+    border-radius: 20%;
+    margin: 7px;
+    cursor: pointer;
+}
+.element:active {scale : 0.98}
