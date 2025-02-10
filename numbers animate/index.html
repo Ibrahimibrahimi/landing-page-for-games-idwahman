@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <!-- <span class="numbers">
+            <span class="number">0</span>
+            <span class="number">0</span>
+            <span class="number">0</span>
+            <span class="number">0</span>
+            <span class="number">0</span>
+            <span class="number">0</span>
+            <span class="number">0</span>
+            <span class="number">0</span>
+            <span class="number">0</span>
+            <span class="number">0</span>
+        </span> -->
+    </div>
+
+    <script>
+        var container = document.querySelector(".container");
+
+        var n = 13452; // number to create spans animations 
+        var number = n.toString().split(""); // transform to string and to list
+        
+        number.forEach(po=>{
+            
+        // create spans using foreach
+        var numbers = document.createElement("span");
+        numbers.className = "numbers";
+        container.appendChild(numbers);
+        // create span numbers 
+        for (var i = 0; i < 10 ; i++){
+            var Num = document.createElement("span");
+            Num.className = "number";
+            Num.innerText = i;
+            numbers.appendChild(Num);
+        }
+        setTimeout(() => {
+            scaleTo(numbers,po)
+        }, 500);
+    });
+        function scaleTo(el,nul){
+            el.style.transition = "1s";
+            el.style.transform = "translateY(" + -70 * nul + "px)";
+        }
+    </script>
+</body>
+</html>
